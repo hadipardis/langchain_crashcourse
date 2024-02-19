@@ -13,7 +13,7 @@ llm = OpenAI(model_name="gpt-3.5-turbo-instruct",openai_api_key="YOUR_API_KEY", 
 #As an alternative, you can use an open-source LLM like Falcon or Llama from HuggingFace
 #repo_id = "tiiuae/falcon-7b-instruct"
 repo_id = "ericzzz/falcon-rw-1b-chat"
-huggingfacehub_api_token = "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" #Use your own API key
+huggingfacehub_api_token = "YOUR_HUGGING_FACE_ACCESS_TOKEN" #Use your own API key
 llm = HuggingFaceHub(huggingfacehub_api_token=huggingfacehub_api_token,
                      repo_id=repo_id,
                      model_kwargs={"temperature":0.1, "max_new_tokens":1500})
@@ -33,7 +33,7 @@ out = chain.invoke("It today is Monday, what day is tomorrow?")
 print(out["text"])
 
 repo_id = "ericzzz/falcon-rw-1b-chat"
-huggingfacehub_api_token = "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" #Use your own API key
+#huggingfacehub_api_token = "YOUR_HUGGING_FACE_ACCESS_TOKEN" #Use your own API key
 llm = HuggingFaceHub(huggingfacehub_api_token=huggingfacehub_api_token,
                      repo_id=repo_id,
                      model_kwargs={"temperature":0.1, "max_new_tokens":1500})
