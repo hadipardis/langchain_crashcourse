@@ -22,7 +22,7 @@ db = FAISS.from_documents(docs, embeddings)
 from langchain import HuggingFaceHub
 
 repo_id = "tiiuae/falcon-7b-instruct"
-key = "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" #Use your own API key
+key = "YOUR_HUGGING_FACE_ACCESS_TOKEN" #Use your own API key
 
 llm=HuggingFaceHub(huggingfacehub_api_token= key,
                    repo_id=repo_id,
